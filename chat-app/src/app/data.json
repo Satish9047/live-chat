@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "image": "/images/john.jpg",
+    "message": "Hello, I'm John Doe. Nice to meet you!"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "image": "/images/jane.jpg",
+    "message": "Hi there! I'm Jane Smith. Welcome to my page!"
+  },
+  {
+    "id": 3,
+    "name": "Mike Johnson",
+    "image": "/images/mike.jpg",
+    "message": "Hey! I'm Mike Johnson. Feel free to say hi!"
+  },
+  {
+    "id": 4,
+    "name": "Emily Brown",
+    "image": "/images/emily.jpg",
+    "message": "Greetings! I'm Emily Brown. Let's connect!"
+  },
+  {
+    "id": 5,
+    "name": "Alex Wilson",
+    "image": "/images/alex.jpg",
+    "message": "Hello everyone! I'm Alex Wilson. Nice to e-meet you!"
+  },
+  {
+    "id": 6,
+    "name": "Sophia Lee",
+    "image": "/images/sophia.jpg",
+    "message": "Hi, I'm Sophia Lee. Thanks for stopping by!"
+  },
+  {
+    "id": 7,
+    "name": "James Miller",
+    "image": "/images/james.jpg",
+    "message": "Hello there! I'm James Miller. Let's connect and collaborate!"
+  },
+  {
+    "id": 8,
+    "name": "Ava Davis",
+    "image": "/images/ava.jpg",
+    "message": "Hi, I'm Ava Davis. Excited to be a part of this community!"
+  },
+  {
+    "id": 9,
+    "name": "William Taylor",
+    "image": "/images/william.jpg",
+    "message": "Hey everyone! I'm William Taylor. Looking forward to engaging discussions!"
+  },
+  {
+    "id": 10,
+    "name": "Olivia Clark",
+    "image": "/images/olivia.jpg",
+    "message": "Hi friends! I'm Olivia Clark. Let's learn and grow together!"
+  }
+]
