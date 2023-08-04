@@ -12,14 +12,14 @@ const registerController = async (req, res) => {
 
   //validation
   if (!email || !validator.isEmail(email)) {
-    return res.status(400).json({ error: "invalid email" });
+    return res.status(400).json({ error: "invalid email !" });
   }
 
   if (!contact || !validator.isNumeric(contact)) {
     return res.status(400).json({ error: "invalid contact" });
   }
 
-  if (!password || validator.isLength(password, { min: 8 })) {
+  if (!password || !validator.isLength(password, { min: 8 })) {
     return res.status(400).json({ error: "invalid password" });
   }
 
@@ -31,15 +31,16 @@ const registerController = async (req, res) => {
         return res.status(500).json({ error: "internal server error" });
       }
 
-      const newUser = new User({
+      const newUser = User({
         email: email,
         contact: contact,
         password: hash,
       });
       await newUser.save();
+      res.status(200).json({ message: "User register Successfully" });
     });
 
-    res.status(200).json({ message: "User register Successfully" });
+    
   } catch (error) {
     console.log("can't register new User", error);
     res.status(500).json({ error: "Internal server error" });
@@ -83,13 +84,11 @@ const loginController = async (req, res) => {
         if (error) {
           console.error(error);
           return res.status(500).json({ error: "internal server error" });
+        } else{
+            console.log(token);
+            res.status(200).json({ success: "login successfull", jwtToken: token });
         }
-
-        console.log(token);
-      }
-    );
-
-    res.status(200).json({ success: "login successfull", jwtToken: token });
+      });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "internal server error" });
