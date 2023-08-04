@@ -1,7 +1,9 @@
+import Login from '@/app/componentss/Login'
+
 const page = () => {
   return (
     <div>
-      this is login page
+      <Login />
     </div>
   )
 }

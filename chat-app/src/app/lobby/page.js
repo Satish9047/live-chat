@@ -1,10 +1,10 @@
-import Register from '@/app/componentss/Register'
 import React from 'react'
+import Lobby from '../componentss/Lobby'
 
 const page = () => {
   return (
     <div>
-      <Register />
+      <Lobby />
     </div>
   )
 }
