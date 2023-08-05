@@ -1,13 +1,16 @@
+
 const express = require("express");
 const { loginController, registerController } = require("../controller/userAuth");
-const {friendListsController} =  require("../controller/friendlist");
+const {friendListsController, friendController} =  require("../controller/friendlist");
 
-const router =express.Router();
+const router = express.Router();
 
 router.post("/login", loginController)
 
 router.post("/register", registerController)
 
 router.get("/friendlists", friendListsController)
+
+router.get("/friendlists/:id", friendController)
 
 module.exports = router
