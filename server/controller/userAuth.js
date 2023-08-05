@@ -23,6 +23,11 @@ const registerController = async (req, res) => {
     return res.status(400).json({ error: "invalid password" });
   }
 
+  const existUser = await User.findOne({email: email, contact: contact});
+  if(existUser.email || existUser.contact){
+    return res.status(400).json({error: "email or contact already exist"});
+  }
+
   //hashing and saving
   try {
     bcrypt.hash(password, saltRound, async (error, hash) => {
