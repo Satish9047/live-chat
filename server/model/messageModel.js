@@ -1,19 +1,22 @@
 const mongoose = require("mongoose");
 
 const messageSchema = new mongoose.Schema({
-    email:{
-        type: String
-    },
     sendBy: {
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
     },
-    sendTo: {
-        type: String
+    content: {
+        type: String,
+        trim: true
     },
-    sendDate: {
-        type: Date
+    chat: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Chat"
     },
-    message: {
-        type: String
-    }
+}, {
+    timestamps: true
 })
+
+const Message = mongoose.Model("message", messageSchema);
+
+module.exports = Message;
